@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            height: 300px;
+            width: 300px;
+            background-color: red;
+            position: fixed;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="wrap">
+
+    </div>
+
+    <script>
+        let right = 100
+        window.addEventListener('resize', () => {
+            let wrap = document.getElementById("wrap")
+            let wrapWidth = wrap.offsetWidth
+            let body = document.documentElement.body
+            right += 100
+            let left = wrap.offsetLeft
+
+            if (left < 1000) {
+                // wrap.style.visibility = "hidden"
+                wrap.style.display = "none"
+            } else {
+                wrap.style.display = "block"
+            }
+            console.log("left", left)
+            console.log(left)
+        });
+    </script>
+
+    <!-- <script src="./第一题.js"></script> -->
+    <!-- <script src="./第二题.js"></script> -->
+    <script src="./第三题.js"></script>
+</body>
+
+</html>
